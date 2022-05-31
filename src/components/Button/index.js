@@ -49,7 +49,7 @@ function Button({
   }
 
   const classes = cx('wrapper', {
-    className,
+    [className]: className,
     primary,
     outline,
     text,
