@@ -20,7 +20,7 @@
   justify-content: space-between;
 }
 
-.logo {
+.logo-link {
   display: flex;
   align-items: center;
 }
@@ -62,10 +62,9 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--white);
-  font-family: 'ProximaNova', sans-serif;
+  font-family: var(--font-family);
   background-color: var(--primary);
 }
-
 
 .user-avatar {
   width: 32px;
@@ -75,4 +74,3 @@
   margin-left: 12px;
   cursor: pointer;
 }
-
