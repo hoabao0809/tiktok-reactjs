@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HeadlessTippy from '@tippyjs/react/headless';
 
-import * as searchServies from '~/services/searchServices';
+import * as searchServices from '~/services/searchServices';
 import { Wrapper as PopperWrapper } from '../../Popper';
 import AccountItem from '../AccountItem';
 import { SearchIcon } from '~/components/Icons';
@@ -32,7 +32,7 @@ function Search() {
     const fetchApi = async () => {
       setLoading(true);
 
-      const result = await searchServies.search(debounced);
+      const result = await searchServices.search(debounced);
       setSearchResult(result);
 
       setLoading(false);
@@ -60,7 +60,7 @@ function Search() {
 
   return (
     // Using a wrapper <div> or <span> tag around the reference element solves this by creating a new parentNode context.
-   <div>
+    <div>
       <HeadlessTippy
         interactive
         visible={showResult && searchResult.length > 0}
@@ -91,11 +91,11 @@ function Search() {
               <FontAwesomeIcon icon={faCircleXmark} />
             </button>
           )}
-  
+
           {loading && (
             <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
           )}
-  
+
           <button
             className={cx('search-btn')}
             onMouseDown={(e) => e.preventDefault()}
@@ -104,7 +104,7 @@ function Search() {
           </button>
         </div>
       </HeadlessTippy>
-   </div>
+    </div>
   );
 }
 
