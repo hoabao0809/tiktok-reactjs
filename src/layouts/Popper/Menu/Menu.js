@@ -55,7 +55,7 @@ function Menu({
   );
 
   // Reset to first page
-  const handleResetMenu = () => {
+  const handleReset = () => {
     setHistory((prev) => prev.slice(0, 1));
   };
   return (
@@ -66,7 +66,7 @@ function Menu({
       delay={[0, 700]}
       placement="bottom-end"
       render={renderResult}
-      onHide={handleResetMenu}
+      onHide={handleReset}
     >
       {children}
     </Tippy>
